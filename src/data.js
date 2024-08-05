@@ -6,11 +6,20 @@ export default {
     news: "Novinky",
     about: "Kapela",
     records: "Nahrávky",
-    contact_page: {
-      title: "Kontakt",
-    },
+    news_page: {
+      title: "Novinky",
+    },  
     about_page: {
       title: "Kapela",
+    },
+    records_page: {
+      title: "Nahrávky",
+    },
+    gigs_page: {
+      title: "Koncerty",
+    },
+    contact_page: {
+      title: "Kontakt",
     },
   },
 };
