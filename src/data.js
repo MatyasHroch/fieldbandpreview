@@ -8,7 +8,7 @@ export default {
     records: "Nahrávky",
     news_page: {
       title: "Novinky",
-    },  
+    },
     about_page: {
       title: "Kapela",
     },
