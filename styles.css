@@ -36,6 +36,20 @@ main {
     gap: 2rem;
 }
 
+address {
+    font-size: 1.5rem;
+    font-style: normal;
+}
+
+i {
+    font-size: 2rem;
+    padding: 0.5rem 0;
+}
+
+a {
+    color: inherit
+}
+
 ul {
     list-style-type: none;
     padding: 0;
@@ -57,7 +71,10 @@ section h2 {
     font-weight: bold;
     color: white;
     margin: 0;
+    margin-bottom: 1rem;
 }
+
+iframe {}
 
 .navigation {
     display: flex;
@@ -65,6 +82,8 @@ section h2 {
     justify-content: center;
     align-items: center;
     gap: 1rem;
+    flex-wrap: wrap;
+    font-size: 1.2rem;
 }
 
 .navigation a {
@@ -90,12 +109,41 @@ header img {
 
 }
 
+.flex {
+    display: flex;
+}
+
+.items-center {
+    align-items: center;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.gap-2 {
+    gap: 1rem;
+}
+
+.gap-1 {
+    gap: 0.5rem;
+}
+
+
+
+
 
 @media screen and (max-width: 600px) {
     header img {
-        display: none;
+        /* display: none; */
+        width: 2.5em;
+    }
+
+    .sm-gap-1 {
+        gap: 0.5rem;
     }
 }
+
 
 /* .home_background {
     background-image: url('home_background.jpg');
