@@ -13,6 +13,8 @@ header {
     text-align: center;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    z-index: 2;
 }
 
 footer {
@@ -86,9 +88,30 @@ iframe {}
     font-size: 1.2rem;
 }
 
+.floating-logo {
+    position: absolute;
+    margin: auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    color: var(--secondary-bg-color);
+    top: 1rem;
+    gap: 2rem;
+    z-index: 2;
+    font-size: 2rem;
+}
+
+.font-size-1-2 {
+    font-size: 1.2rem;
+}
+
 .navigation a {
     color: white;
     text-decoration: none;
+}
+
+.relative {
+    position: relative;
 }
 
 .heading--header {
@@ -129,11 +152,7 @@ header img {
     gap: 0.5rem;
 }
 
-
-
-
-
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 640px) {
     header img {
         /* display: none; */
         width: 2.5em;
@@ -141,6 +160,18 @@ header img {
 
     .sm-gap-1 {
         gap: 0.5rem;
+    }
+
+    .floating-logo {
+        font-size: 1rem;
+        gap: 1rem;
+        top: 0.5rem;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .floating-logo {
+        font-size: 1.5rem;
     }
 }
 
