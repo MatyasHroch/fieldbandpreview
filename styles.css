@@ -90,8 +90,11 @@ section h2 {
     font-size: 1.2rem;
 }
 
-.menu-button {
+.header-logo {
     display: none;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1.2rem;
 }
 
 .floating-logo {
@@ -136,6 +139,10 @@ header img {
     width: 4em;
 }
 
+header a {
+    height: fit-content;
+}
+
 .no-href-styles {
     text-decoration: none;
     color: inherit;
@@ -178,9 +185,13 @@ dialog {
 
 .menu-button {
     border: none;
-    padding: 0.25rem 0.5rem;
+    padding: 0.25rem 0.25rem;
     color: var(--main-text-color);
     background: none;
+}
+
+.menu-button i {
+    padding: 0;
 }
 
 dialog header {
@@ -259,6 +270,14 @@ i.fa-instagram {
 @media screen and (max-width: 1024px) {
     .floating-logo {
         font-size: 1.5rem;
+    }
+
+    .floating-logo {
+        display: none;
+    }
+
+    .header-logo {
+        display: flex;
     }
 
 }

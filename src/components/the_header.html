@@ -2,6 +2,15 @@
   <a href="#" class="no-href-styles">
     <img src="./favicon.webp" alt="logo" />
   </a>
+
+  <div class="header-logo">
+    <span>f</span>
+    <span>i</span>
+    <span>e</span>
+    <span>l</span>
+    <span>d</span>
+    <span>.</span>
+  </div>
   <!-- <span class="font-size-1-2">f i e l d .</span> -->
   <nav>
     <ul class="navigation">
@@ -64,7 +73,6 @@
   const menuItems = document.querySelectorAll(".mobile-navigation li");
 
   const body = document.getElementsByTagName("body")[0];
-  console.log(body);
 
   function openMenu() {
     dialogMenu.showModal();
@@ -74,8 +82,6 @@
   function closeMenu() {
     dialogMenu.close();
     body.classList.remove("no-scrolling");
-
-    console.log("closeMenu");
   }
 
   menuButton.addEventListener("click", openMenu);
@@ -83,6 +89,4 @@
   for (const item of menuItems) {
     item.addEventListener("click", closeMenu);
   }
-
-  closeMenu();
 </script>
