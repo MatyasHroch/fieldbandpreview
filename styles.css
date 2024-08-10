@@ -139,9 +139,6 @@ header img {
     width: 4em;
 }
 
-header a {
-    height: fit-content;
-}
 
 .no-href-styles {
     text-decoration: none;
@@ -171,8 +168,9 @@ header a {
 
 /* Hamburger menu */
 dialog {
-    width: 100%;
+    width: 110vh;
     height: 100vh;
+    border-radius: 1em;
     background-color: var(--main-bg-color);
     border: none;
 }
@@ -184,6 +182,7 @@ dialog {
 }
 
 .menu-button {
+    display: none;
     border: none;
     padding: 0.25rem 0.25rem;
     color: var(--main-text-color);
@@ -223,7 +222,7 @@ dialog i {
 }
 
 i.fa-instagram {
-    font-size: 2.2rem;
+    font-size: 2.25rem;
 }
 
 .no-scrolling {
@@ -232,6 +231,14 @@ i.fa-instagram {
 
 
 @media screen and (max-width: 640px) {
+
+    .floating-logo {
+        display: none;
+    }
+
+    .header-logo {
+        display: flex;
+    }
 
     header,
     section {
@@ -270,14 +277,6 @@ i.fa-instagram {
 @media screen and (max-width: 1024px) {
     .floating-logo {
         font-size: 1.5rem;
-    }
-
-    .floating-logo {
-        display: none;
-    }
-
-    .header-logo {
-        display: flex;
     }
 
 }
