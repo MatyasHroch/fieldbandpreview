@@ -1,11 +1,15 @@
 export default {
   main: {
-    langueage: "cs",
-    contact: "Kontakt",
-    gigs: "Koncerty",
-    news: "Novinky",
-    about: "Kapela",
-    records: "Nahrávky",
+    language: "cs",
+    the_header: {
+      contact: "Kontakt",
+      gigs: "Koncerty",
+      news: "Novinky",
+      about: "Kapela",
+      records: "Nahrávky",
+      social_media: {},
+    },
+    floating_logo: {},
     news_page: {
       title: "Novinky",
     },
@@ -20,6 +24,7 @@ export default {
     },
     contact_page: {
       title: "Kontakt",
+      social_media: {},
     },
   },
 };

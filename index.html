@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{language}">
+<html lang="cs">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -14,40 +14,112 @@
   </head>
   <body>
     <header>
-      <a href="#" class="no-href-styles">
-        <img src="./favicon.webp" alt="logo" />
-      </a>
-      <!-- <span class="font-size-1-2">f i e l d .</span> -->
+  <a href="#" class="no-href-styles">
+    <img src="./favicon.webp" alt="logo" />
+  </a>
+  <!-- <span class="font-size-1-2">f i e l d .</span> -->
+  <nav>
+    <ul class="navigation">
+      <!-- <li>
+          <a href="#news">Novinky</a>
+        </li> -->
+      <!-- <li>
+          <a href="#about">Kapela</a>
+        </li> -->
+      <li>
+        <a href="#records">Nahrávky</a>
+      </li>
+      <!-- <li>
+          <a href="#gigs">Koncerty</a>
+        </li> -->
+      <li>
+        <a href="#contact">Kontakt</a>
+      </li>
+    </ul>
+  </nav>
+  <button class="menu-button">
+    <i class="fa-solid fa-bars"></i>
+  </button>
+  <dialog class="dialog-menu">
+    <div class="dialog-container">
+      <header>
+        <button class="menu-button js-close-button">
+          <i class="fa-solid fa-x"></i>
+        </button>
+      </header>
       <nav>
-        <ul class="navigation">
+        <ul class="mobile-navigation">
           <!-- <li>
-            <a href="#news">Novinky</a>
-          </li> -->
+                <a href="#news">Novinky</a>
+              </li> -->
           <!-- <li>
-            <a href="#about">Kapela</a>
-          </li> -->
-          <li></li>
+                <a href="#about">Kapela</a>
+              </li> -->
           <li>
             <a href="#records">Nahrávky</a>
           </li>
           <!-- <li>
-            <a href="#gigs">Koncerty</a>
-          </li> -->
+                <a href="#gigs">Koncerty</a>
+              </li> -->
           <li>
             <a href="#contact">Kontakt</a>
           </li>
         </ul>
       </nav>
-    </header>
+      <div class="flex justify-center">
+        <div class="flex gap-2 items-center">
+  <a href="https://www.facebook.com/field.band">
+    <i class="fa-brands fa-facebook"></i>
+  </a>
+  <a href="https://www.instagram.com/field._band/">
+    <i class="fa-brands fa-instagram"></i>
+  </a>
+</div>
+
+      </div>
+    </div>
+  </dialog>
+</header>
+<script>
+  const menuButton = document.querySelector(".menu-button");
+  const dialogMenu = document.querySelector(".dialog-menu");
+  const closeMenuButton = document.querySelector(".js-close-button");
+  const menuItems = document.querySelectorAll(".mobile-navigation li");
+
+  const body = document.getElementsByTagName("body")[0];
+  console.log(body);
+
+  function openMenu() {
+    dialogMenu.showModal();
+    body.classList.add("no-scrolling");
+  }
+
+  function closeMenu() {
+    dialogMenu.close();
+    body.classList.remove("no-scrolling");
+
+    console.log("closeMenu");
+  }
+
+  menuButton.addEventListener("click", openMenu);
+  closeMenuButton.addEventListener("click", closeMenu);
+  for (const item of menuItems) {
+    item.addEventListener("click", closeMenu);
+  }
+
+  closeMenu();
+</script>
+
     <main class="relative">
       <div class="floating-logo">
-        <span>f</span>
-        <span>i</span>
-        <span>e</span>
-        <span>l</span>
-        <span>d</span>
-        <span>.</span>
-      </div>
+  <span>f</span>
+  <span>i</span>
+  <span>e</span>
+  <span>l</span>
+  <span>d</span>
+  <span>.</span>
+</div>
+
       <img src="./media/home.webp" alt="picture_of_a_band" />
       <!-- <img src="/media/logo.png" alt="logo" /> -->
       <!-- <div class="home_background"></div> -->
@@ -67,16 +139,17 @@
   <h2>Kontakt</h2>
   <div>
     <div class="flex gap-2 items-center">
+  <a href="https://www.facebook.com/field.band">
+    <i class="fa-brands fa-facebook"></i>
+  </a>
+  <a href="https://www.instagram.com/field._band/">
+    <i class="fa-brands fa-instagram"></i>
+  </a>
+</div>
+
+    <div class="flex gap-2 items-center">
       <i class="fa-solid fa-envelope"></i>
       <address>kapela.field@gmail.com</address>
-    </div>
-    <div class="flex gap-2 items-center">
-      <a href="https://www.facebook.com/field.band">
-        <i class="fa-brands fa-facebook"></i>
-      </a>
-      <a href="https://www.instagram.com/field._band/">
-        <i class="fa-brands fa-instagram"></i>
-      </a>
     </div>
   </div>
 </section>
