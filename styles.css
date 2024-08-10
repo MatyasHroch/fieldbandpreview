@@ -1,9 +1,11 @@
 :root {
     --main-bg-color: rgb(30, 30, 30);
+    --main-bg-color-opacity: rgb(30, 30, 30, 0.8);
     --main-text-color: #E0E0E0;
     --main-text-color-opacity: rgba(224, 224, 224, 0.8);
     --secondary-bg-color: rgb(51, 51, 51);
     --secondary-bg-color-opacity: rgb(51, 51, 51, 0.8);
+    --secondary-bg-color-opacity2: rgb(51, 51, 51, 0.8);
 }
 
 header {
@@ -18,6 +20,19 @@ header {
     z-index: 2;
 }
 
+h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+    margin: 0;
+}
+
+h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    margin: 0;
+}
 
 footer {
     background-color: var(--secondary-bg-color);
@@ -40,14 +55,22 @@ main {
     gap: 2rem;
 }
 
-address {
+address,
+time {
     font-size: 1.5rem;
     font-style: normal;
 }
 
+
 i {
     font-size: 2rem;
     padding: 0.5rem 0;
+}
+
+#gigs i {
+    min-width: 19.2px;
+    text-align: center;
+
 }
 
 a {
@@ -72,7 +95,7 @@ section {
 }
 
 section h2 {
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: bold;
     color: white;
     margin: 0;
@@ -158,12 +181,40 @@ header img {
     justify-content: center;
 }
 
+.mt-1 {
+    margin-top: 0.5rem;
+}
+
+.mt-2 {
+    margin-top: 1rem;
+}
+
+.mt-4 {
+    margin-top: 2rem;
+}
+
 .gap-2 {
     gap: 1rem;
 }
 
 .gap-1 {
     gap: 0.5rem;
+}
+
+.w-fit {
+    width: fit-content;
+}
+
+.font-size-normal {
+    font-size: 1rem;
+}
+
+.font-size-1-2 {
+    font-size: 1.2rem;
+}
+
+.font-size-big {
+    font-size: 1.5rem;
 }
 
 /* Hamburger menu */
@@ -229,6 +280,25 @@ i.fa-instagram {
     overflow: hidden;
 }
 
+/* Youtube videos */
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    padding-bottom: calc(56.25% * 0.5);
+    /* 16: 9 and 75%  */
+    width: 50%;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
 
 @media screen and (max-width: 640px) {
 
@@ -279,7 +349,13 @@ i.fa-instagram {
         font-size: 1.5rem;
     }
 
+    .video-container {
+        width: 100%;
+        padding-bottom: 56.25%;
+    }
+
 }
+
 
 
 /* .home_background {
