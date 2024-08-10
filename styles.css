@@ -113,6 +113,10 @@ section h2 {
     font-size: 1.2rem;
 }
 
+*:target {
+    scroll-margin-top: 60px;
+}
+
 .header-logo {
     display: none;
     align-items: center;
@@ -267,6 +271,7 @@ dialog nav {
     font-size: 1.5rem;
     color: var(--main-text-color);
 }
+
 
 dialog i {
     color: var(--main-text-color-opacity);
